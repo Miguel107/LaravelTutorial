@@ -25,3 +25,6 @@ Route::get('/about', function () {
       ->with("description", $description)
       ->with("author", $author);
 })->name("home.about");
+
+Route::get('/image', 'App\Http\Controllers\ImageController@index')->name("image.index");
+Route::post('/image/save', 'App\Http\Controllers\ImageController@save')->name("image.save");
